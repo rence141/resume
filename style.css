@@ -1,0 +1,186 @@
+/* VARIABLES */
+:root {
+    --c-dark: #212529;
+    --c-brand: #f0920ee1;
+    --c-brand-light: #2dd4dd;
+    --c-brand-rgb: 78, 87, 212;
+    --c-body: #ec9b20;
+    --font-base: "ClashDisplay", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.938);
+    --transition: all 0.5s ease;
+}
+/*Reset & Helpers*/
+body {
+    line-height: 1.7;
+    color: var(--c-body);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 600;
+    color: var(--c-dark);
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--c-brand-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+.theme-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+
+/*Navbar*/
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--c-dark);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--c-brand);
+}
+
+/*button*/
+.btn {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0%;
+    padding: 10px 24px;
+}
+
+.btn-brand {
+    background-color: var(--c-brand);
+    border-color: var(--c-brand);
+    color: white;
+}
+.btn-brand:hover {
+    background-color: var(--c-brand-light);
+    border-color: var(--c-brand-light);
+    color: white;
+}
+
+/*Introduction*/
+
+
+/*Hero*/
+#hero {
+    background: linear-gradient(#3e3b3b00, #000000cd), url(../images/BU_TORCH.png );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+/*Section Title*/
+.section-title{
+    margin-bottom: 60px;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
+
+}
+
+.section-title p {
+max-width: 500px;
+margin-left: auto;
+margin-right: auto;
+}
+
+/*Icon Box*/
+.iconbox {
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: gba(var(--c-brand-rgb), 0.2);
+    color: var(--c-brand);
+    font-size: 34px;
+    flex: none;
+}
+
+/* Credential*/
+.credential {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+
+}
+
+.credential::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: rgba (var(--c-brand-rgb), 0.2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: var(--transition);
+
+}
+
+.credential:hover::after{
+    width: 100%;
+    height: 100%;
+    background-color: var(--c-brand);
+z-index: -1;
+}
+
+.credential:hover h5,
+.credential:hover p {
+    color: rgb(255, 251, 251);
+}
+
+.credential:hover .iconbox {
+background-color: rgb(253, 253, 253, 0.12);
+color: white;
+}
+
+/*Contact*/
+#contact h1 {
+    color: var(--c-brand);
+}
+
+#contact {
+    position: relative;
+    z-index: 2;
+
+}
+
+#contact::after {
+
+    content: "";
+    width: 100%;
+    height: 70%;
+    background: linear-gradient var(#212529);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
